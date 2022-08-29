@@ -14,3 +14,5 @@
 *  npm i bcrypt
 *  npm i jsonwebtoken
 *  npm i uuid
+
+Aplicação crida com node express para fins educacionais

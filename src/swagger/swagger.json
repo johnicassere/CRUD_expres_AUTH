@@ -45,6 +45,38 @@
       }
     },
 
+    "users/one-user/{id}": {
+      "get": {
+        "summary": "Busca um usuario pelo ID",
+        "description": "Rota responsável por buscar um usuario pelo ID",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do usuario para a busca",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
     "/users/create": {
       "post": {
         "summary": "Criar um novo usuário",
@@ -89,6 +121,82 @@
       }
     },
     
+    "users/update-user/{id}": {
+      "put": {
+        "summary": "Editar um usuario pelo ID",
+        "description": "Rota responsável por editar um usuario pelo ID",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do usuario para a busca",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              },
+              "examples": {
+                "Users": {
+                  "value": {
+                    "name": "Johni",
+                    "userName": "cassere",
+                    "email":"update@update.com",
+                    "password":"123456",
+                    "img": "./img/img.png"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "users/delete/{id}": {
+      "delete": {
+        "summary": "Apagar um usuario pelo ID",
+        "description": "Rota responsável por apagar um usuario pelo ID",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do usuario para deletar",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+
+
     "/auth/login": {
       "post": {
         "summary": "Entrar/Logar",
