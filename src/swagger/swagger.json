@@ -10,13 +10,14 @@
   },
   "servers": [
     {
-      "url": "https://crud-express-auth.herokuapp.com/",
-      "description": "API no Heroku"
-    },
-    {
       "url": "http://localhost:3001",
       "description": "API local"
+    },
+    {
+      "url": "http://crud-express-auth.herokuapp.com/",
+      "description": "API no Heroku"
     }
+    
   ],
   "paths": {
     "/users/all-users": {
@@ -45,7 +46,7 @@
       }
     },
 
-    "users/one-user/{id}": {
+    "/users/one-user/{id}": {
       "get": {
         "summary": "Busca um usuario pelo ID",
         "description": "Rota responsável por buscar um usuario pelo ID",
@@ -121,7 +122,7 @@
       }
     },
     
-    "users/update-user/{id}": {
+    "/users/update-user/{id}": {
       "put": {
         "summary": "Editar um usuario pelo ID",
         "description": "Rota responsável por editar um usuario pelo ID",
@@ -172,7 +173,7 @@
         }
       }
     },
-    "users/delete/{id}": {
+    "/users/delete/{id}": {
       "delete": {
         "summary": "Apagar um usuario pelo ID",
         "description": "Rota responsável por apagar um usuario pelo ID",
