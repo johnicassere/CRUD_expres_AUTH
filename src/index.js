@@ -23,5 +23,5 @@ app.use("/api-docs", swaggerRoute);
 
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}/api-docs`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
