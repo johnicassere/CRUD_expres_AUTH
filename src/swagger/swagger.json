@@ -14,7 +14,7 @@
       "description": "API local"
     },
     {
-      "url": "http://crud-express-auth.herokuapp.com/",
+      "url": "https://crud-express-auth.herokuapp.com/",
       "description": "API no Heroku"
     }
     
