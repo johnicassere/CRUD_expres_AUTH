@@ -16,8 +16,8 @@
 *  npm i uuid
 
 README Ex:
-[Link1](https://www.readme-templates.com/)
-[Link2](https://github.com/limaricardo/exemplo-readme)
+*  [Link1](https://www.readme-templates.com/)
+*  [Link2](https://github.com/limaricardo/exemplo-readme)
 
 
 Aplicação crida com node express para fins educacionais
